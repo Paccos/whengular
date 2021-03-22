@@ -14,9 +14,10 @@ import { ToggleButtonComponent } from './toggle-button/toggle-button.component';
 import { DateGridComponent } from './date-grid/date-grid.component';
 import { ParticipantListComponent } from './participant-list/participant-list.component';
 import { SubmitButtonComponent } from './submit-button/submit-button.component';
+import { PollComponent } from './poll/poll.component';
 
 @NgModule({
-  declarations: [AppComponent, NameCircleComponent, DateViewComponent, NamesBarComponent, YesMaybeCounterComponent, DateColumnComponent, ToggleButtonComponent, DateGridComponent, ParticipantListComponent, SubmitButtonComponent],
+  declarations: [AppComponent, NameCircleComponent, DateViewComponent, NamesBarComponent, YesMaybeCounterComponent, DateColumnComponent, ToggleButtonComponent, DateGridComponent, ParticipantListComponent, SubmitButtonComponent, PollComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

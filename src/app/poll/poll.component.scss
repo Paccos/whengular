@@ -1,0 +1,37 @@
+.resultsAndSubmit {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+}
+
+.submitAndAbort {
+  display: grid;
+  min-width: 136px;
+  grid-template-columns: 60px 60px;
+  column-gap: 16px;
+}
+
+#pollSpinner {
+  display: flex;
+  justify-content: center;
+  margin: 100px;
+}
+
+#submitSpinner {
+  margin-bottom: 15px;
+}
+
+#participantHeading {
+  margin: 16px 0;
+  text-align: left;
+  font-family: "Helvetica Neue", "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+@media (max-width: 768px) {
+  .resultsAndSubmit {
+    align-items: initial;
+    flex-direction: column;
+  }
+}
