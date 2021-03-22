@@ -1,6 +1,6 @@
 <div
   class="nameCircle"
-  matTooltip="{{ name }}"
+  matTooltip="{{ stacked ? name : '' }}"
   [ngClass]="{ stackedCircle: stacked, maybe: maybe }"
 >
   {{ initials() }}
