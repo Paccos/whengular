@@ -1,0 +1,41 @@
+.yesCount {
+  color: #129f00;
+  font-family: "Helvetica Neue", "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  margin-right: 1px;
+}
+
+.maybeCount {
+  color: #ef9c00;
+  font-family: "Helvetica Neue", "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  margin-left: 1px;
+}
+
+.ymCounter {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .ymCounter {
+    order: 2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 16px;
+    margin-top: auto;
+    margin-bottom: auto;
+    min-width: 32px;
+  }
+
+  .yesCount {
+    margin: 0;
+  }
+
+  .maybeCount {
+    margin: 0;
+  }
+}
