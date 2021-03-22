@@ -12,4 +12,20 @@
     margin: 0;
     margin-bottom: 16px;
   }
+
+  app-toggle-button {
+    order: 1;
+  }
+
+  app-date-view {
+    order: 2;
+  }
+
+  app-yes-maybe-counter {
+    order: 3;
+  }
+
+  app-names-bar {
+    order: 4;
+  }
 }
