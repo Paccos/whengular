@@ -1,0 +1,16 @@
+.dateGrid {
+  display: flex;
+  overflow: scroll;
+  align-items: flex-end;
+  flex-grow: 4;
+  margin-right: 16px;
+}
+
+@media (max-width: 768px) {
+  .dateGrid {
+    overflow: none;
+    align-items: initial;
+    flex-direction: column;
+    margin: auto 0;
+  }
+}

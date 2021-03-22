@@ -5,20 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NameCircleComponent } from './name-circle/name-circle.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTooltipModule } from "@angular/material/tooltip";
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { DateViewComponent } from './date-view/date-view.component';
+import { NamesBarComponent } from './names-bar/names-bar.component';
+import { YesMaybeCounterComponent } from './yes-maybe-counter/yes-maybe-counter.component';
+import { DateColumnComponent } from './date-column/date-column.component';
+import { ToggleButtonComponent } from './toggle-button/toggle-button.component';
+import { DateGridComponent } from './date-grid/date-grid.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NameCircleComponent
-  ],
+  declarations: [AppComponent, NameCircleComponent, DateViewComponent, NamesBarComponent, YesMaybeCounterComponent, DateColumnComponent, ToggleButtonComponent, DateGridComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatTooltipModule
+    MatTooltipModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
