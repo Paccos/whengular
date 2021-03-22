@@ -1,0 +1,10 @@
+<div class="participants" *ngFor="let participant of participants">
+  <button class="editCircle" (click)="editActionHandler(participant.id)">
+    <img src="../assets/Edit.png" alt="Edit Button" />
+  </button>
+  <app-name-circle
+    [name]="participant.name"
+    [stacked]="false"
+  ></app-name-circle>
+  <div class="participantName">{{ participant.name }}</div>
+</div>

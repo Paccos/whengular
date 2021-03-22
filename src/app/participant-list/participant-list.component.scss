@@ -1,0 +1,36 @@
+.participants {
+  display: grid;
+  grid-template-columns: 60px 60px 1fr;
+  column-gap: 24px;
+  row-gap: 16px;
+  align-items: center;
+}
+
+.editCircle {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  min-width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  border-width: 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+#deleteCircle {
+  margin-bottom: 0;
+}
+
+.participantName {
+  font-family: "Helvetica Neue", "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.submitAndAbort {
+  display: grid;
+  min-width: 136px;
+  grid-template-columns: 60px 60px;
+  column-gap: 16px;
+  justify-content: space-around;
+}

@@ -12,9 +12,10 @@ import { YesMaybeCounterComponent } from './yes-maybe-counter/yes-maybe-counter.
 import { DateColumnComponent } from './date-column/date-column.component';
 import { ToggleButtonComponent } from './toggle-button/toggle-button.component';
 import { DateGridComponent } from './date-grid/date-grid.component';
+import { ParticipantListComponent } from './participant-list/participant-list.component';
 
 @NgModule({
-  declarations: [AppComponent, NameCircleComponent, DateViewComponent, NamesBarComponent, YesMaybeCounterComponent, DateColumnComponent, ToggleButtonComponent, DateGridComponent],
+  declarations: [AppComponent, NameCircleComponent, DateViewComponent, NamesBarComponent, YesMaybeCounterComponent, DateColumnComponent, ToggleButtonComponent, DateGridComponent, ParticipantListComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
