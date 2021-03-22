@@ -1,25 +1,27 @@
-<div class="participants" *ngFor="let participant of participants">
-  <app-submit-button
-    *ngIf="participant.id === editId; else editButton"
-    [img]="'../assets/Cross.png'"
-    [alt]="'Delete'"
-    [color]="'red'"
-    [id]="'deleteCircle'"
-    [submitHandler]="onDeleteClicked"
-    matTooltip="{{
-      participant.id === authorId
-        ? 'Der Eintrag des Autors kann nicht gelöscht werden'
-        : ''
-    }}"
-  ></app-submit-button>
-  <ng-template #editButton>
-    <button class="editCircle" (click)="editActionHandler(participant.id)">
-      <img src="../assets/Edit.png" alt="Edit Button" />
-    </button>
-  </ng-template>
-  <app-name-circle
-    [name]="participant.name"
-    [stacked]="false"
-  ></app-name-circle>
-  <div class="participantName">{{ participant.name }}</div>
+<div class="participants">
+  <ng-container *ngFor="let participant of participants">
+    <app-submit-button
+      *ngIf="participant.id === editId; else editButton"
+      [img]="'../assets/Cross.png'"
+      [alt]="'Delete'"
+      [color]="'red'"
+      [id]="'deleteCircle'"
+      [submitHandler]="onDeleteClicked"
+      matTooltip="{{
+        participant.id === authorId
+          ? 'Der Eintrag des Autors kann nicht gelöscht werden'
+          : ''
+      }}"
+    ></app-submit-button>
+    <ng-template #editButton>
+      <button class="editCircle" (click)="editActionHandler(participant.id)">
+        <img src="../assets/Edit.png" alt="Edit Button" />
+      </button>
+    </ng-template>
+    <app-name-circle
+      [name]="participant.name"
+      [stacked]="false"
+    ></app-name-circle>
+    <div class="participantName">{{ participant.name }}</div>
+  </ng-container>
 </div>

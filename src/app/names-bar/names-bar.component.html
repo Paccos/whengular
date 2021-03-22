@@ -1,5 +1,6 @@
-<div class="namesBar" *ngFor="let nands of namesAndStates">
+<div class="namesBar">
   <app-name-circle
+    *ngFor="let nands of namesAndStates"
     [stacked]="true"
     [name]="nands.name"
     [maybe]="nands.maybe"

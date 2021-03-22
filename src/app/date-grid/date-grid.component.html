@@ -1,5 +1,6 @@
-<div class="dateGrid" *ngFor="let e of entries">
+<div class="dateGrid">
   <app-date-column
+    *ngFor="let e of entries"
     [dateToDisplay]="e.date"
     [namesAndStates]="e.entries"
     [buttonState]="buttonState(e.date)"
