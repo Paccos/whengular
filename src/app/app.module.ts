@@ -13,9 +13,10 @@ import { DateColumnComponent } from './date-column/date-column.component';
 import { ToggleButtonComponent } from './toggle-button/toggle-button.component';
 import { DateGridComponent } from './date-grid/date-grid.component';
 import { ParticipantListComponent } from './participant-list/participant-list.component';
+import { SubmitButtonComponent } from './submit-button/submit-button.component';
 
 @NgModule({
-  declarations: [AppComponent, NameCircleComponent, DateViewComponent, NamesBarComponent, YesMaybeCounterComponent, DateColumnComponent, ToggleButtonComponent, DateGridComponent, ParticipantListComponent],
+  declarations: [AppComponent, NameCircleComponent, DateViewComponent, NamesBarComponent, YesMaybeCounterComponent, DateColumnComponent, ToggleButtonComponent, DateGridComponent, ParticipantListComponent, SubmitButtonComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

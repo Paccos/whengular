@@ -20,4 +20,8 @@ export class ParticipantListComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  onDeleteClicked: () => void = () => {
+    this.deleteActionHandler(this.editId);
+  };
 }
