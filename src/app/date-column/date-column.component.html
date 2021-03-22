@@ -1,0 +1,11 @@
+<div class="dateColumn">
+  <app-names-bar [namesAndStates]="namesAndStates"></app-names-bar>
+  <app-date-view [dateToDisplay]="dateToDisplay"></app-date-view>
+  <app-yes-maybe-counter
+    [yesMaybeCount]="{ yes: yesCount(), maybe: maybeCount() }"
+  ></app-yes-maybe-counter>
+  <app-toggle-button
+    [buttonState]="buttonState"
+    [buttonChangeHandler]="onButtonChange"
+  ></app-toggle-button>
+</div>

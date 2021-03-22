@@ -1,0 +1,15 @@
+.dateColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .dateColumn {
+    flex-direction: row;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+}
