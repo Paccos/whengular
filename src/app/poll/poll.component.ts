@@ -68,7 +68,17 @@ export class PollComponent implements OnInit {
   onUserSelectionChange: (date: Date, state: SelectionState) => void = (
     date,
     state
-  ) => {};
+  ) => {
+    let selections = this.userSelections.slice();
+    const index = selections.findIndex(
+      (s) => s.date.getTime() === date.getTime()
+    );
+
+    if (index !== -1) {
+      selections[index].state = state;
+      this.userSelections = selections.slice();
+    }
+  };
 
   onSubmitAction: () => void = () => {};
 
@@ -83,6 +93,14 @@ export class PollComponent implements OnInit {
 
       if (participant) this.username = participant.name;
     }
+  };
+
+  onDeleteAction: (id: string) => void = (id) => {
+    // 1. Request to service to delete a user
+
+    this.onAbortEdit(); // 2. leave edit mode after deleting
+
+    // 3. fetch new poll data
   };
 
   onAbortEdit: () => void = () => {
