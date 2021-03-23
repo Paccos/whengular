@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-participant-list',
@@ -13,11 +14,25 @@ export class ParticipantListComponent implements OnInit {
   @Input() editId: string = '';
   @Input() authorId: string = '';
 
-  constructor() {}
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {}
 
   onDeleteClicked: () => void = () => {
-    this.deleteActionHandler(this.editId);
+    if (this.editId === this.authorId) return;
+
+    const dialogRef = this.dialog.open(ConfirmDeleteDialog);
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result === true) {
+        this.deleteActionHandler(this.editId);
+      }
+    });
   };
 }
+
+@Component({
+  selector: 'dialog-confirm-delete',
+  templateUrl: 'dialog-confirm-delete-content.html',
+})
+export class ConfirmDeleteDialog {}

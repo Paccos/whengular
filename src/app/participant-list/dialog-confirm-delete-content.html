@@ -1,0 +1,19 @@
+<h1>Löschen bestätigen</h1>
+<mat-dialog-content align="center"
+  ><p>
+    Bist Du sicher, dass Du Deinen Eintrag löschen möchtest?
+  </p></mat-dialog-content
+>
+<mat-dialog-actions align="center">
+  <app-submit-button
+    [img]='"../assets/Checkmark.png"'
+    [color]="'red'"
+    [mat-dialog-close]="true"
+    [ngStyle]="{margin: '0 8px'}"
+  ></app-submit-button>
+  <app-submit-button
+    [img]='"../assets/Cross.png"'
+    [ngStyle]="{margin: '0 8px'}"
+    mat-dialog-close
+  ></app-submit-button>
+</mat-dialog-actions>

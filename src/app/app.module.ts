@@ -14,9 +14,13 @@ import { YesMaybeCounterComponent } from './yes-maybe-counter/yes-maybe-counter.
 import { DateColumnComponent } from './date-column/date-column.component';
 import { ToggleButtonComponent } from './toggle-button/toggle-button.component';
 import { DateGridComponent } from './date-grid/date-grid.component';
-import { ParticipantListComponent } from './participant-list/participant-list.component';
+import {
+  ConfirmDeleteDialog,
+  ParticipantListComponent,
+} from './participant-list/participant-list.component';
 import { SubmitButtonComponent } from './submit-button/submit-button.component';
 import { PollComponent } from './poll/poll.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -31,6 +35,7 @@ import { PollComponent } from './poll/poll.component';
     ParticipantListComponent,
     SubmitButtonComponent,
     PollComponent,
+    ConfirmDeleteDialog,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +43,7 @@ import { PollComponent } from './poll/poll.component';
     BrowserAnimationsModule,
     MatTooltipModule,
     FormsModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
