@@ -1,10 +1,10 @@
 <button
   class="submitButton"
   (click)="submitHandler()"
-  [ngStyle]="{ backgroundColor: color }"
   [id]="id"
   [disabled]="disabled"
   matTooltip="{{ tooltip }}"
+  [ngStyle]="{ backgroundColor: color }"
 >
   <img
     src="{{ img ? img : '../assets/SubmitArrow.png' }}"
