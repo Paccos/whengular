@@ -42,7 +42,13 @@ export class PollComponent implements OnInit {
   ];
 
   userSelections: { date: Date; state: SelectionState }[] = [];
-  participants: { id: string; name: string }[] = [];
+
+  participants: { id: string; name: string }[] = [
+    { id: '1234', name: 'Hans' },
+    { id: '4334', name: 'Wurst' },
+    { id: '5656', name: 'Kaese' },
+  ];
+
   idToEdit: string = '';
   username: string = '';
 

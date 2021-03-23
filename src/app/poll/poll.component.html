@@ -18,4 +18,8 @@
 </div>
 
 <h3 id="participantHeading" class="subtitle">Teilnehmer:</h3>
-<app-participant-list></app-participant-list>
+<app-participant-list
+  [participants]="participants"
+  [editId]="idToEdit"
+  [editActionHandler]="onEditAction"
+></app-participant-list>
