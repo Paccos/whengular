@@ -1,25 +1,42 @@
-<div class="resultsAndSubmit">
-  <app-date-grid
-    [entries]="entries"
-    [userSelections]="userSelections"
-    [userSelectionHandler]="onUserSelectionChange"
-  ></app-date-grid>
-
-  <div class="submitAndAbort">
-    <app-submit-button
-      *ngIf="idToEdit.trim() !== ''"
-      [img]="'../assets/Cross.png'"
-      [alt]="'Abort'"
-      [id]="'abortEditButton'"
-      [submitHandler]="onAbortEdit"
-    ></app-submit-button>
-    <app-submit-button [submitHandler]="onSubmitAction"></app-submit-button>
+<div class="main">
+  <div class="titleHeading">
+    <h1 class="title">
+      {{ pollTitle }},
+      <p class="when">When?</p>
+    </h1>
+    <h3 class="subtitle">Umfrage von {{ pollAuthor() }}</h3>
+    <input
+      type="text"
+      id="username"
+      [(ngModel)]="username"
+      placeholder="Dein Name"
+    />
   </div>
-</div>
 
-<h3 id="participantHeading" class="subtitle">Teilnehmer:</h3>
-<app-participant-list
-  [participants]="participants"
-  [editId]="idToEdit"
-  [editActionHandler]="onEditAction"
-></app-participant-list>
+  <div class="resultsAndSubmit">
+    <app-date-grid
+      [entries]="entries"
+      [userSelections]="userSelections"
+      [userSelectionHandler]="onUserSelectionChange"
+    ></app-date-grid>
+
+    <div class="submitAndAbort">
+      <app-submit-button
+        *ngIf="idToEdit.trim() !== ''"
+        [img]="'../assets/Cross.png'"
+        [alt]="'Abort'"
+        [id]="'abortEditButton'"
+        [submitHandler]="onAbortEdit"
+      ></app-submit-button>
+      <app-submit-button [submitHandler]="onSubmitAction"></app-submit-button>
+    </div>
+  </div>
+
+  <h3 id="participantHeading" class="subtitle">Teilnehmer:</h3>
+  <app-participant-list
+    [authorId]="authorId"
+    [participants]="participants"
+    [editId]="idToEdit"
+    [editActionHandler]="onEditAction"
+  ></app-participant-list>
+</div>

@@ -7,6 +7,14 @@ import { SelectionState } from '../selection-state.enum';
   styleUrls: ['./poll.component.scss'],
 })
 export class PollComponent implements OnInit {
+  pollId: string = '';
+  pollTitle: string = 'Wurstbrot';
+
+  authorId: string = '1234';
+  idToEdit: string = '';
+
+  username: string = '';
+
   entries = [
     {
       date: new Date('2020-12-25'),
@@ -49,8 +57,9 @@ export class PollComponent implements OnInit {
     { id: '5656', name: 'Kaese' },
   ];
 
-  idToEdit: string = '';
-  username: string = '';
+  pollAuthor: () => string | undefined = () => {
+    return this.participants.find((p) => p.id === this.authorId)?.name;
+  };
 
   constructor() {}
 

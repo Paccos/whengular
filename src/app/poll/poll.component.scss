@@ -1,3 +1,57 @@
+.main {
+  margin: 36px 0;
+}
+
+.titleHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 48px;
+}
+
+.titleHeading > * {
+  margin-bottom: 8px;
+}
+
+h1.title {
+  text-align: center;
+  font-family: "Helvetica Neue", "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+}
+
+h3.subtitle {
+  text-align: center;
+  font-family: "Helvetica Neue", "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+input[type="text"] {
+  border-radius: 8px;
+  border-color: #afafaf;
+  border-width: 1px;
+  border-style: solid;
+  font-family: "Helvetica Neue", "Roboto", sans-serif;
+  padding: 8px 12px;
+  width: 80%;
+}
+
+input[type="text"].error {
+  border-color: red;
+  border-width: 2px;
+}
+
+input[type="text"].error::placeholder {
+  color: red;
+}
+
+.when {
+  font-family: "Helvetica Neue", "Roboto", sans-serif;
+  font-weight: 200;
+  display: inline;
+}
+
 .resultsAndSubmit {
   display: flex;
   align-items: flex-end;
@@ -33,5 +87,21 @@
   .resultsAndSubmit {
     align-items: initial;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    margin: 16px;
+  }
+
+  .titleHeading {
+    margin: 16px 0;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }

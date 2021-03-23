@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,12 +19,25 @@ import { SubmitButtonComponent } from './submit-button/submit-button.component';
 import { PollComponent } from './poll/poll.component';
 
 @NgModule({
-  declarations: [AppComponent, NameCircleComponent, DateViewComponent, NamesBarComponent, YesMaybeCounterComponent, DateColumnComponent, ToggleButtonComponent, DateGridComponent, ParticipantListComponent, SubmitButtonComponent, PollComponent],
+  declarations: [
+    AppComponent,
+    NameCircleComponent,
+    DateViewComponent,
+    NamesBarComponent,
+    YesMaybeCounterComponent,
+    DateColumnComponent,
+    ToggleButtonComponent,
+    DateGridComponent,
+    ParticipantListComponent,
+    SubmitButtonComponent,
+    PollComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTooltipModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
