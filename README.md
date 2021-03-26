@@ -1,5 +1,7 @@
 # WhenGular
 
+Angular implementation of the [When](https://github.com/Paccos/when) client app, which was written in React.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
 
 ## Development server
